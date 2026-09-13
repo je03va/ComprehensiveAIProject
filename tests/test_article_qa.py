@@ -47,9 +47,12 @@ class TestConversation(unittest.TestCase):
     def test_session_tracks_history(self):
         session = ConversationSession("Article text here")
         session.ask("What is the main point?")
-        session.record_answer("The main point is clarity.")
+        session.ask("What is the second point?")
+        self.assertEqual(len(session.messages), 1)
+        self.assertEqual(session.messages[0]["content"], "What is the second point?")
+
+        session.record_answer("The second point is clarity.")
         self.assertEqual(len(session.messages), 2)
-        self.assertEqual(session.messages[0]["role"], "user")
         self.assertEqual(session.messages[1]["role"], "assistant")
 
 

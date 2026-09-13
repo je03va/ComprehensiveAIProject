@@ -26,7 +26,7 @@ def _read_file_contents(path: Path) -> str:
 
 
 def normalize_articles(articles: str | Iterable[str] | None) -> str:
-    """Coalesce one or many article strings into a single source text."""
+    """Normalize one or many article strings into a single source text."""
     if articles is None:
         return ""
 

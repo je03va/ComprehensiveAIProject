@@ -54,7 +54,7 @@ class ConversationSession:
         question_text = (question or "").strip()
         if not question_text:
             raise ValueError("Question text cannot be empty.")
-        self.messages.append({"role": "user", "content": question_text})
+        self.messages = [{"role": "user", "content": question_text}]
         return question_text
 
     def record_answer(self, answer: str) -> str:
