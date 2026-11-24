@@ -1,5 +1,0 @@
-source,documents,vader_mean,textblob_mean,correlation,label_agreement_%,vader_negative_%
-github,321,0.249,0.056,0.359,53.6,28.3
-hn,1176,0.368,0.11,0.387,64.5,21.2
-stackoverflow,295,0.228,0.046,0.361,48.8,36.6
-ALL,1792,0.323,0.09,0.386,60.0,25.0

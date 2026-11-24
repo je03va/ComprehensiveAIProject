@@ -14,3 +14,32 @@ output.wav
 
 # hub runtime logs
 hub/logs/
+
+# reports and docs not used by the hub
+*REPORT*.md
+*report*.md
+*Report*.docx
+*.docx
+KnnMLR/report/
+
+# generated outputs / runtime logs not read by the hub
+KnnMLR/logs/
+kNNRegressorAgent/logs/
+kNNRegressorAgent/plots/
+kNNRegressorAgent/train.py
+ModelBasedAgent/*.png
+ModelBasedAgent/*.log
+LearningAgent/agent_output/*.csv
+SimpleReflexAgent/batteries.db
+CorpusNLP/outputs/
+NLPSentiment/data/
+NLPSentiment/prepare_data.py
+NLPSentiment/outputs/*.md
+NLPSentiment/outputs/*.log
+NLPSentiment/outputs/confusion_*.png
+NLPSentiment/outputs/scatter_*.png
+
+# chatbot dev tooling (not used by the hub)
+tests/
+pyproject.toml
+.pytest_cache/

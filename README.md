@@ -38,7 +38,7 @@ done
 If a module has no `.venv`, the hub falls back to its own Python. See
 [hub/README.md](hub/README.md) for how the modules are integrated, plus data notes.
 
-Not in the repo: demo recordings (`*.mov`), virtual environments, `.env`, and hub logs.
+Not in the repo: demo recordings (`*.mov`), project reports, generated outputs and logs the hub does not read, chatbot tests, virtual environments, and `.env`.
 
 ## Article Q&A Chatbot (`src/article_qa/`)
 
@@ -49,7 +49,7 @@ that text. It does a single turn per run and keeps no memory between runs.
 - `conversation.py` builds the prompt and handles the single-turn session
 - `gemini_client.py` wraps the Gemini API
 - `tts.py` adds optional spoken output and strips markdown before speaking
-- `app.py` is the CLI entry point; tests are in `tests/test_article_qa.py`
+- `app.py` is the CLI entry point
 
 ```bash
 export GEMINI_API_KEY="your-key"
