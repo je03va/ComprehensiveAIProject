@@ -1,0 +1,156 @@
+CORPUS ANALYSIS NLP AGENT - findings (developers, 2026-10-31 01:23)
+
+Corpus statistics (starter tokenizers)
+       source  documents  sentences  words first_date  last_date
+       github        321       2604  77336 2025-11-01 2026-10-31
+           hn       1176       8296 196993 2025-11-04 2026-10-31
+stackoverflow        295       2431  77188 2025-11-03 2026-10-30
+
+Sentiment over time
+         documents  vader  textblob
+period                             
+2025-11        166  0.258     0.072
+2025-12        166  0.332     0.086
+2026-01        161  0.260     0.066
+2026-02        150  0.434     0.114
+2026-03        151  0.289     0.068
+2026-04        151  0.255     0.087
+2026-05        150  0.339     0.102
+2026-06        149  0.373     0.105
+2026-07        138  0.468     0.109
+2026-08        135  0.316     0.091
+2026-09        133  0.344     0.113
+2026-10        142  0.229     0.074
+
+VADER by source and period
+source   github     hn  stackoverflow
+period                               
+2025-11   0.012  0.367          0.153
+2025-12   0.392  0.379          0.182
+2026-01   0.072  0.321          0.229
+2026-02   0.479  0.446          0.365
+2026-03   0.336  0.251          0.389
+2026-04   0.298  0.304          0.004
+2026-05   0.230  0.365          0.360
+2026-06   0.359  0.390          0.311
+2026-07   0.435  0.473          0.518
+2026-08  -0.025  0.450         -0.207
+2026-09   0.224  0.369          0.522
+2026-10   0.146  0.294          0.029
+
+Risk indicators (% of documents)
+         security  jobs  bugs_hallucination  licensing
+period                                                
+2025-11       8.4   6.0                11.4        1.8
+2025-12       2.4   6.6                 7.8        1.2
+2026-01       2.5   7.5                14.9        0.6
+2026-02       6.0   8.0                12.0        1.3
+2026-03      15.9   2.6                 7.9        2.6
+2026-04       6.6   2.0                 9.9        0.7
+2026-05       3.3   8.7                 7.3        1.3
+2026-06       3.4   9.4                 8.1        1.3
+2026-07       6.5   5.8                 7.2        2.9
+2026-08       5.2   9.6                 5.2        2.2
+2026-09       2.3   9.8                 7.5        2.3
+2026-10       6.3   4.9                 7.0        3.5
+
+Assistant mentions (% of documents)
+         copilot  chatgpt  claude  cursor
+period                                   
+2025-11     25.3     32.5    38.6    17.5
+2025-12     22.3     31.9    41.6    13.9
+2026-01     25.5     31.7    46.0    21.7
+2026-02     34.7     30.7    59.3    22.0
+2026-03     33.8     29.1    54.3    23.8
+2026-04     28.5     31.8    51.7    24.5
+2026-05     28.0     38.7    52.0    22.0
+2026-06     26.2     30.2    51.0    30.2
+2026-07     26.8     32.6    55.8    29.7
+2026-08     20.7     34.8    57.0    34.1
+2026-09     22.6     39.1    53.4    36.1
+2026-10     35.2     31.0    52.1    33.1
+
+Top keywords
+keyword  count
+ claude   2127
+  agent   1078
+copilot    953
+ cursor    942
+   tool    831
+ coding    682
+     wa    614
+  model    589
+   file    563
+  codex    532
+     ha    490
+ github    489
+chatgpt    488
+    doe    442
+project    423
+
+Emerging topics (latest period vs earlier)
+    keyword  latest_docs  latest_share_%  earlier_share_%  growth_x
+   backdoor            9             6.3              0.0     12.68
+marketplace           11             7.7              1.5      5.11
+    harness           21            14.8              3.3      4.52
+     prefer            8             5.6              1.5      3.72
+  extension           17            12.0              3.9      3.09
+ acceptance           10             7.0              2.3      3.06
+   contract            8             5.6              1.9      3.00
+       link           10             7.0              2.4      2.98
+       copy           10             7.0              2.5      2.83
+performance            8             5.6              2.2      2.58
+
+VADER vs TextBlob evaluation
+       source  documents  vader_mean  textblob_mean  correlation  label_agreement_%  vader_negative_%
+       github        321       0.249          0.056        0.359               53.6              28.3
+           hn       1176       0.368          0.110        0.387               64.5              21.2
+stackoverflow        295       0.228          0.046        0.361               48.8              36.6
+          ALL       1792       0.323          0.090        0.386               60.0              25.0
+
+ALERTS (15)
+- 2026-01 sentiment_drop [overall]: mean VADER +0.332 -> +0.260
+    e.g. [hn 2026-01-19] Gas Town Decoded. To use it effectively, I spend a long time producing FSD (functional specification documents) to exhaustively plan out new features or architecture changes. I&#x27;ll pass those docs back and forth between gemini, codex&#x2F;chatgpt-pro, and claude. I&#x27;ll ask each one something (https://news.ycombinator.com/item?id=46674404)
+- 2026-01 risk_spike [bugs_hallucination]: 7.8% -> 14.9% of documents (24 docs)
+    e.g. [hn 2026-01-19] Gas Town Decoded. To use it effectively, I spend a long time producing FSD (functional specification documents) to exhaustively plan out new features or architecture changes. I&#x27;ll pass those docs back and forth between gemini, codex&#x2F;chatgpt-pro, and claude. I&#x27;ll ask each one something (https://news.ycombinator.com/item?id=46674404)
+- 2026-02 risk_spike [security]: 2.5% -> 6.0% of documents (9 docs)
+    e.g. [stackoverflow 2026-02-18] Nx publish is releasing all the packages in independent mode with wrong tags.  I am running into a weird issue where the NX release and publish are not in sync. I cannot commit the package.json's back to my repo for security reasons, however I can publish tags and changelogs. Given, two packages: 
+  (https://stackoverflow.com/questions/79891698/nx-publish-is-releasing-all-the-packages-in-independent-mode-with-wrong-tags)
+- 2026-03 sentiment_drop [overall]: mean VADER +0.434 -> +0.289
+    e.g. [hn 2026-03-31] The Claude Code Source Leak: fake tools, frustration regexes, undercover mode. You are spamming the whole fucking thread with the same nonsense. It is instructed to hide that the PR was made via Claude Code. I don&#x27;t know why people who are so AI forward like yourself have such a problem with te (https://news.ycombinator.com/item?id=47592261)
+- 2026-03 risk_spike [security]: 6.0% -> 15.9% of documents (24 docs)
+    e.g. [hn 2026-03-31] The Claude Code Source Leak: fake tools, frustration regexes, undercover mode. You are spamming the whole fucking thread with the same nonsense. It is instructed to hide that the PR was made via Claude Code. I don&#x27;t know why people who are so AI forward like yourself have such a problem with te (https://news.ycombinator.com/item?id=47592261)
+- 2026-05 risk_spike [jobs]: 2.0% -> 8.7% of documents (13 docs)
+    e.g. [hn 2026-05-11] Software engineering may no longer be a lifetime career. That&#x27;s only if you do agentic coding. I use LLMs in the following ways: 1. Copy-pasting code into the web chat UI and asking for something (bugfix, add a feature, refactor, explain, review it etc), including entire source code files. A $2 (https://news.ycombinator.com/item?id=48102032)
+- 2026-07 risk_spike [security]: 3.4% -> 6.5% of documents (9 docs)
+    e.g. [github 2026-07-29] [Initiative]: agent-toolkit production distribution (Claude · Claude Code · Cursor IDE · Agent CLI). ### Describe the feature
+
+Umbrella epic for making `nanlabs/agent-toolkit` a **reliable, narrow production distribution repository** for NaNLABS AI capabilities.
+
+**Product contract (updated 2026-08- (https://github.com/nanlabs/agent-toolkit/issues/4)
+- 2026-08 sentiment_drop [overall]: mean VADER +0.468 -> +0.316
+    e.g. [stackoverflow 2026-08-30] GitHub Copilot Agent fails to start in VS Code on Windows 10 — native addon / DLL error.  I am testing the new Agent Host / Copilot Agent functionality in Visual Studio Code on Windows. 
+ VS Code itself works normally. GitHub Copilot is connected, and the workspace opens without any problems. The pr (https://stackoverflow.com/questions/79999386/github-copilot-agent-fails-to-start-in-vs-code-on-windows-10-native-addon-dl)
+- 2026-08 risk_spike [jobs]: 5.8% -> 9.6% of documents (13 docs)
+    e.g. [github 2026-08-16] [agents] A reporter that makes Claude Code, Codex and Cursor appear on the board. ### Epic
+
+#197
+
+### Context
+
+`010` to `030` built somewhere for agent activity to be recorded and seen. Nothing writes to it. The
+three agents this repository is worked by emit no common event format and cannot be modi (https://github.com/johnbekele-121/infracanvas/issues/201)
+- 2026-10 sentiment_drop [overall]: mean VADER +0.344 -> +0.229
+    e.g. [hn 2026-10-10] REA Reverse – Engineer Anything. Really just a few attempts at cybersecurity related things (not even RE) with ChatGPT&#x2F;Codex triggered a warning of breaking ToS by email. A few days later I was banned. No appeal. My conclusion is that OpenAI will help you with cybersecurity and never really blo (https://news.ycombinator.com/item?id=50033134)
+- 2026-10 risk_spike [security]: 2.3% -> 6.3% of documents (9 docs)
+    e.g. [github 2026-10-30] [BleepingComputer] Malicious Claude Code extension on Cursor planted SSH backdoors. 
+
+A malicious version of Anthropic's Claude Code VS Code extension was distributed through Cursor's extension marketplace for approximately 11 hours on October 29, exposing up to 5,000 developers to malware designed  (https://github.com/SecOpsNews/news/issues/75892)
+- 2026-10 risk_spike [licensing]: 2.3% -> 3.5% of documents (5 docs)
+    e.g. [stackoverflow 2026-10-30] int main(int argc, char* argv[]) is causing compilation issues.  I am following Sol's graphics tutorial for sdl3 and am encountering a strange error as I seem to keep getting the error  'argv': unreferenced parameter  and only works when I NULL argv and argc but that's what claude and github copilot (https://stackoverflow.com/questions/80013737/int-mainint-argc-char-argv-is-causing-compilation-issues)
+- 2026-10 emerging_topic [backdoor]: in 6.3% of docs vs 0.0% before
+    e.g. [hn 2026-10-30] Backdoor in Claude Code for VS Code extension on the Cursor Marketplace. All these security issues have made me want to build more of my own slimmed down tools. It would be great if there were better ways to use claude code with my own minimal harness and still have access to the pro plan. (https://news.ycombinator.com/item?id=50309523)
+- 2026-10 emerging_topic [marketplace]: in 7.7% of docs vs 1.5% before
+    e.g. [hn 2026-10-30] Backdoor in Claude Code for VS Code extension on the Cursor Marketplace. All these security issues have made me want to build more of my own slimmed down tools. It would be great if there were better ways to use claude code with my own minimal harness and still have access to the pro plan. (https://news.ycombinator.com/item?id=50309523)
+- 2026-10 emerging_topic [harness]: in 14.8% of docs vs 3.3% before
+    e.g. [hn 2026-10-30] Show HN: Bot_board – A message board for code harnesses collaboration. If you run a bunch of coding agents in parallel (Claude Code, Codex and Copilot in my case), on different projects, you&#x27;ve probably noticed that it only works for so long until you run into coordination problems. I tried rel (https://news.ycombinator.com/item?id=50307815)

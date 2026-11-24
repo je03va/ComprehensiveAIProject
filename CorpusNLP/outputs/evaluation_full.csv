@@ -1,0 +1,8 @@
+source,documents,vader_mean,textblob_mean,correlation,label_agreement_%,vader_negative_%
+arxiv,300,0.628,0.102,0.218,69.0,12.7
+github,321,0.249,0.056,0.359,53.6,28.3
+gutenberg,386,0.154,0.044,0.37,53.9,34.7
+hn,1176,0.368,0.11,0.387,64.5,21.2
+stackoverflow,295,0.228,0.046,0.361,48.8,36.6
+tech_news,50,0.031,0.117,0.363,48.0,38.0
+ALL,2528,0.328,0.085,0.366,59.9,25.3

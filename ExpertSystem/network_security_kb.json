@@ -1,0 +1,141 @@
+{
+  "facts": {
+    "default_credentials": "Are any devices still using default/factory login credentials?",
+    "no_firewall": "Is there no firewall (or an unconfigured firewall) protecting the network?",
+    "open_ports": "Are there open ports exposed directly to the internet?",
+    "unencrypted_traffic": "Is sensitive traffic sent without encryption (e.g. plain HTTP, FTP)?",
+    "outdated_firmware": "Is any router/switch/firewall firmware out of date?",
+    "weak_wifi_encryption": "Is the wifi using weak or no encryption (open, WEP, or WPA)?",
+    "no_network_segmentation": "Are all devices on a single flat network with no segmentation/VLANs?",
+    "unrestricted_remote_access": "Is remote access (RDP/SSH/VPN) allowed from any IP with no restrictions?",
+    "no_logging_monitoring": "Is there no logging or monitoring of network/security events?",
+    "guest_network_shared": "Does the guest wifi share the same network as internal systems?",
+    "popup ads": "Are users seeing unexpected pop-up ads on their machines?"
+  },
+  "rules": {
+    "Default Credentials Exposure": {
+      "facts": [
+        "default_credentials"
+      ],
+      "severity": "Critical",
+      "confidence": 0.95,
+      "recommendation": [
+        "Change all default usernames/passwords immediately.",
+        "Enforce a password policy for all network devices.",
+        "Audit devices periodically for default credentials."
+      ]
+    },
+    "Unrestricted Inbound Access": {
+      "facts": [
+        "no_firewall",
+        "open_ports"
+      ],
+      "severity": "High",
+      "confidence": 0.85,
+      "recommendation": [
+        "Deploy and configure a firewall with a default-deny inbound policy.",
+        "Close any ports not explicitly required.",
+        "Restrict remaining open ports to known source IPs where possible."
+      ]
+    },
+    "Data in Transit Exposure": {
+      "facts": [
+        "unencrypted_traffic"
+      ],
+      "severity": "High",
+      "confidence": 0.8,
+      "recommendation": [
+        "Enforce TLS/HTTPS and SFTP/SSH for all sensitive traffic.",
+        "Disable legacy unencrypted protocols where possible."
+      ]
+    },
+    "Known Vulnerability Exposure": {
+      "facts": [
+        "outdated_firmware"
+      ],
+      "severity": "Critical",
+      "confidence": 0.9,
+      "recommendation": [
+        "Patch/update firmware on all network devices.",
+        "Subscribe to vendor security advisories.",
+        "Establish a regular patch-management schedule."
+      ]
+    },
+    "Wireless Eavesdropping Risk": {
+      "facts": [
+        "weak_wifi_encryption"
+      ],
+      "severity": "Medium",
+      "confidence": 0.75,
+      "recommendation": [
+        "Switch to WPA3 (or WPA2-AES minimum).",
+        "Rotate wifi passwords and disable WPS."
+      ]
+    },
+    "Lateral Movement Risk": {
+      "facts": [
+        "no_network_segmentation"
+      ],
+      "severity": "High",
+      "confidence": 0.7,
+      "recommendation": [
+        "Segment the network with VLANs by function/sensitivity.",
+        "Apply inter-VLAN access control rules."
+      ]
+    },
+    "Remote Exploitation Risk": {
+      "facts": [
+        "unrestricted_remote_access"
+      ],
+      "severity": "Critical",
+      "confidence": 0.9,
+      "recommendation": [
+        "Restrict remote access to a VPN with MFA.",
+        "Whitelist source IPs where feasible.",
+        "Disable direct RDP/SSH exposure to the internet."
+      ]
+    },
+    "Blind Spot in Detection": {
+      "facts": [
+        "no_logging_monitoring"
+      ],
+      "severity": "Medium",
+      "confidence": 0.65,
+      "recommendation": [
+        "Enable logging on firewalls, routers, and critical servers.",
+        "Centralize logs and set alerting for anomalies."
+      ]
+    },
+    "Guest Network Compromise Risk": {
+      "facts": [
+        "guest_network_shared"
+      ],
+      "severity": "Medium",
+      "confidence": 0.7,
+      "recommendation": [
+        "Put the guest network on its own isolated VLAN.",
+        "Block guest-to-internal traffic entirely."
+      ]
+    },
+    "Need to update local machine": {
+      "facts": [
+        "popup ads"
+      ],
+      "severity": "Low",
+      "confidence": 0.9,
+      "recommendation": [
+        "update your machine"
+      ]
+    },
+    "hi": {
+      "facts": [
+        "no_firewall"
+      ],
+      "severity": "High",
+      "confidence": 0.8,
+      "recommendation": [
+        "No steps recorded yet."
+      ]
+    }
+  }
+}

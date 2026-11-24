@@ -1,5 +1,16 @@
 .venv/
+venv/
 .env
 __pycache__/
 *.pyc
+.pytest_cache/
 output.wav
+.github
+.DS_Store
+
+# large recordings / binaries (GitHub 100MB limit)
+*.mov
+*.mp4
+
+# hub runtime logs
+hub/logs/

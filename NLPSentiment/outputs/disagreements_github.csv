@@ -1,0 +1,16 @@
+text,label,pred_textblob,pred_vader,pred_roberta
+"@arturoc: If you multiply-include `gst.h`, wouldn't it be good to add some include guards, so that we don't include it several times, driving up compilation/linking times?",neutral,positive,negative,neutral
+"Ok, so let's be paranoid.",negative,positive,negative,neutral
+"The docs here describe behaviour that is pretty different from what is implemented in the code. The passed value gets constantized if it does not respond to #delivering_email, which actually is a bit weird.",negative,neutral,positive,negative
+"Umm, there's plenty in there that don't :P",positive,positive,negative,neutral
+"Tbh no idea, i don't have sniffs for these, just based myself off the sql comment blocks :P  [EDIT] Sems a bit more logical though.",positive,positive,negative,neutral
+"Sorry, guys. Yes individually tests pass. I am working on a fix which includes moving this form constructor to beforeFind, to ensure correct ordering. Sometimes tests fail because the find results are incorrectly ordered. I have setup postgres now, so i ca",negative,negative,positive,neutral
+Actually it *should* still work on pre-3.0 I just have to test it. There is no checks done on what flags you are setting so since the values are `static final int`s they'll be compiled in the code. They'll be ignore as flags on those platforms but you shou,neutral,positive,negative,neutral
+This is inconsistent with the other UNIX implementations. The caller is responsible for not passing in NULL.,neutral,neutral,positive,negative
+Unstable for Public servers? They are not supported by Trinity xD,neutral,neutral,positive,negative
+"yep, it's work, but i need to add user and password for proxy connection=( Can u added this feature. May be --proxy=login:pass@server:port",negative,negative,positive,neutral
+"off in development mode"""" -1  When I am going through the hell of fixing IE rendering bugs I am working in development mode. I want pages to look exactly the same when in production. I don't want to add a IE hack to find out it creates another bug in pr",negative,positive,negative,neutral
+"Not sure if I like this idea. I get how having a variable for this adds some flexibility, on the other hand it isn't likely that you will have one font color throughout the whole site anyways so I'm not sure how useful it is.  Using the color set in a pare",neutral,neutral,positive,negative
+"I'm afraid it also contains a fair bit of Engrish, both in spelling ('avaible', 'build-in', etc.) and grammar.",negative,neutral,positive,negative
+yes it'd be more complicated I think: I really don't know the details so don't trust me but as I understand it if you want to sync audio on video you'll have to feed it with timestamps and set some compensation. The compensation / async is set at swr_init,neutral,neutral,positive,negative
+"It's always sad to see a reference like that go, but it was probably a good move.",negative,neutral,positive,negative

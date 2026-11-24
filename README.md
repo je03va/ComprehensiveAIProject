@@ -1,68 +1,62 @@
-# Article QA with Gemini and TTS
+# IT Ops AI Suite
 
-This project is a small source-grounded Q&A app designed to answer questions only from the text the user provides. It is intentionally simple: one request, one source, one answer.
+The AI projects I built this semester, each framed as an IT operations tool, plus a
+Streamlit **hub** (`hub/`) that opens all 11 of them from one menu, grouped like an office suite.
 
-## What it does
+| Section | Module | Technique | Folder |
+|---|---|---|---|
+| Intelligent Agents | Battery Swap Reflex Agent | Simple reflex agent | `SimpleReflexAgent/` |
+| Intelligent Agents | Login Intrusion Monitor | Model-based reflex agent | `ModelBasedAgent/` |
+| Learning Agents | RAG Failure Diagnosis Agent | kNN classifier | `LearningAgent/` |
+| Learning Agents | Transcode Time Predictor | kNN regressor | `kNNRegressorAgent/` |
+| Learning Agents | MLR vs kNN Learning Agent | Multilinear regression | `KnnMLR/` |
+| Knowledge & Language | Network Security Advisor | Expert system (forward chaining) | `ExpertSystem/` |
+| Knowledge & Language | Article Q&A Chatbot | Gemini LLM + TTS | `src/article_qa/` |
+| Knowledge & Language | AI Coding Assistant Discussion Monitor | NLP corpus analysis | `CorpusNLP/` |
+| Knowledge & Language | Developer Sentiment Analyzer | Comparative sentiment | `NLPSentiment/` |
+| Games & Simulation | Data Structures Behind Your IT | Animated game-like agent | `GameProject/` |
+| Games & Simulation | Packet Race: BFS vs DFS vs A* | Search simulation | `GameProject/` |
 
-- ingests one or more article strings or PDF/text files
-- normalizes the source material into a single grounded context
-- builds a source-aware system prompt that stays anchored to the provided text
-- asks Gemini a single question from that source only
-- optionally converts the final answer to spoken audio with TTS
+## Run the suite
 
-## Current behavior
+```bash
+cp .env.example .env        # add GEMINI_API_KEY for the chatbot
+./hub/run_hub.sh            # opens http://localhost:8600
+```
 
-- there is no persistent conversation memory across CLI runs
-- each command is treated as a single-turn interaction
-- old questions are not retained in memory
-- the app is designed to stay predictable and source-bound, not to simulate a long-lived chat history
+The first run creates `hub/.venv` from `hub/requirements.txt`. Four modules
+(kNN regressor, MLR, Corpus NLP, Sentiment) run as separate Streamlit apps embedded in
+the hub. Each one uses its own `.venv` because they need different NumPy versions.
+Create those once:
 
-## Core files
+```bash
+for d in kNNRegressorAgent KnnMLR CorpusNLP NLPSentiment; do
+  python3 -m venv $d/.venv && $d/.venv/bin/pip install -r $d/requirements.txt
+done
+```
 
-- `src/article_qa/ingest.py` — article ingestion and source normalization
-- `src/article_qa/conversation.py` — source-grounded prompt construction and single-turn session behavior
-- `src/article_qa/gemini_client.py` — Gemini request generation and API wrapper
-- `src/article_qa/tts.py` — optional TTS support and markdown cleanup before speaking
-- `src/article_qa/app.py` — CLI entry point
-- `tests/test_article_qa.py` — checks for the main flow
+If a module has no `.venv`, the hub falls back to its own Python. See
+[hub/README.md](hub/README.md) for how the modules are integrated, plus data notes.
 
-## Quick start
+Not in the repo: demo recordings (`*.mov`), virtual environments, `.env`, and hub logs.
 
-1. Set your Gemini API key:
+## Article Q&A Chatbot (`src/article_qa/`)
+
+A source-grounded Q&A app. You give it one source and one question, and it answers only from
+that text. It does a single turn per run and keeps no memory between runs.
+
+- `ingest.py` loads article strings or PDF/text files into one grounded context
+- `conversation.py` builds the prompt and handles the single-turn session
+- `gemini_client.py` wraps the Gemini API
+- `tts.py` adds optional spoken output and strips markdown before speaking
+- `app.py` is the CLI entry point; tests are in `tests/test_article_qa.py`
 
 ```bash
 export GEMINI_API_KEY="your-key"
-```
-
-2. Run a question against a source article:
-
-```bash
-PYTHONPATH=src python -m article_qa --text "The article text goes here." --question "What is the author's main argument?"
-```
-
-3. Run against a file or PDF:
-
-```bash
+PYTHONPATH=src python -m article_qa --text "Article text." --question "What is the main argument?"
 PYTHONPATH=src python -m article_qa --files /path/to/article.pdf --question "Summarize the article."
+PYTHONPATH=src python -m article_qa --text "Article text." --question "Summarize it." --speak
 ```
 
-4. Run with spoken output:
-
-```bash
-PYTHONPATH=src python -m article_qa --text "The article text goes here." --question "Summarize the article." --speak
-```
-
-## Prompting behavior
-
-The system prompt is intentionally structured to:
-
-- stay grounded in the provided source text only
-- answer in plain spoken English
-- avoid markdown headings, bullet formatting, and noisy formatting markers
-- be helpful without inventing facts or drifting beyond the article
-
-## Notes
-
-- The project keeps the architecture intentionally minimal: ingestion, prompt construction, Gemini API, and TTS.
-- TTS output is sanitized before speaking so it reads more naturally.
-- If no TTS provider is configured, the app still works in text-only mode.
+The prompt keeps answers inside the source text, in plain spoken English with no markdown.
+If no TTS provider is configured, the app runs in text-only mode.

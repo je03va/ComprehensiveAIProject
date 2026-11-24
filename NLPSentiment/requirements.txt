@@ -1,0 +1,16 @@
+# Pins below are for Intel Macs, where the newest PyTorch available is 2.2.2:
+#  - torch 2.2 was built against NumPy 1.x  -> numpy<2
+#  - transformers >= 4.50 requires torch >= 2.6 -> transformers 4.49
+#  - pandas 3 and pyarrow >= 21 need NumPy 2  -> pandas<3, pyarrow<21
+numpy<2
+pandas<3
+matplotlib
+scikit-learn
+scipy
+textblob
+vaderSentiment
+transformers==4.49.0
+torch
+requests
+streamlit
+pyarrow<21          # newer pyarrow needs NumPy 2

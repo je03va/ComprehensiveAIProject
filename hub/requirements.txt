@@ -1,0 +1,13 @@
+# Environment for the hub itself and the modules that run inside it
+# (Simple Reflex, Model-based, kNN classifier, Expert System, Article Q&A).
+# Embedded apps (kNN Regressor, MLR, Corpus NLP, Sentiment) keep using their own .venv.
+streamlit>=1.50
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+python-dotenv
+pypdf
+gTTS
+google-genai

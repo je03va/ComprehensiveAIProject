@@ -1,0 +1,9 @@
+text,vader_before,label_before,vader_after,label_after,roberta
+Kill the process and restart the server.,-0.6908,negative,0.0,neutral,negative
+"This bug is nasty, the app crashes on startup.",-0.5574,negative,-0.5574,negative,negative
+Fatal error: cannot allocate memory.,-0.7351,negative,0.0,neutral,negative
+The exploit was patched in the latest release.,-0.1027,negative,0.0,neutral,neutral
+"This method is deprecated, use the new API instead.",0.0,neutral,0.0,neutral,negative
+Watch out for a deadlock when two threads block on the same lock.,-0.6486,negative,0.0,neutral,neutral
+The attack surface is much smaller now.,-0.4767,negative,0.0,neutral,neutral
+"LGTM, ship it!",0.0,neutral,0.6155,positive,positive

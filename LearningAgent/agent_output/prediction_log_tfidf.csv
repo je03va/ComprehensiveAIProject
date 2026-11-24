@@ -1,0 +1,241 @@
+timestamp,id,representation,k,predicted,confidence,low_conf_alert,actual,correct
+2026-10-18T19:49:04,756,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,33,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,105,tfidf,15,Contradiction,0.933,False,Contradiction,True
+2026-10-18T19:49:04,725,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,510,tfidf,15,Hallucination,0.8,False,Hallucination,True
+2026-10-18T19:49:04,252,tfidf,15,No Failure,0.6,False,No Failure,True
+2026-10-18T19:49:04,621,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,1011,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,932,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,64,tfidf,15,Hallucination,0.8,False,Hallucination,True
+2026-10-18T19:49:04,1126,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,936,tfidf,15,Hallucination,0.867,False,Hallucination,True
+2026-10-18T19:49:04,59,tfidf,15,No Failure,0.8,False,No Failure,True
+2026-10-18T19:49:04,235,tfidf,15,Partial Answer,0.4,True,Partial Answer,True
+2026-10-18T19:49:04,1094,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,555,tfidf,15,Partial Answer,0.533,True,Partial Answer,True
+2026-10-18T19:49:04,269,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,537,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,165,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,254,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,921,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,722,tfidf,15,Contradiction,0.933,False,Contradiction,True
+2026-10-18T19:49:04,723,tfidf,15,Contradiction,0.8,False,Contradiction,True
+2026-10-18T19:49:04,172,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,451,tfidf,15,Partial Answer,0.667,False,Partial Answer,True
+2026-10-18T19:49:04,160,tfidf,15,Contradiction,0.867,False,Contradiction,True
+2026-10-18T19:49:04,302,tfidf,15,Wrong Citation,0.933,False,Wrong Citation,True
+2026-10-18T19:49:04,526,tfidf,15,No Failure,0.733,False,No Failure,True
+2026-10-18T19:49:04,898,tfidf,15,Contradiction,0.6,False,Contradiction,True
+2026-10-18T19:49:04,1003,tfidf,15,Hallucination,0.933,False,Hallucination,True
+2026-10-18T19:49:04,214,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,542,tfidf,15,Wrong Citation,0.933,False,Wrong Citation,True
+2026-10-18T19:49:04,924,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,990,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,435,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,371,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,304,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,554,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,897,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,475,tfidf,15,Hallucination,0.933,False,Hallucination,True
+2026-10-18T19:49:04,401,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,248,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,907,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,215,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,1121,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,952,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,503,tfidf,15,Wrong Citation,0.933,False,Wrong Citation,True
+2026-10-18T19:49:04,1082,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,917,tfidf,15,No Failure,0.933,False,No Failure,True
+2026-10-18T19:49:04,178,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,707,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,820,tfidf,15,Contradiction,0.867,False,Contradiction,True
+2026-10-18T19:49:04,1176,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,976,tfidf,15,Wrong Citation,0.667,False,Wrong Citation,True
+2026-10-18T19:49:04,412,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,314,tfidf,15,Partial Answer,0.6,False,Partial Answer,True
+2026-10-18T19:49:04,1148,tfidf,15,No Failure,0.667,False,No Failure,True
+2026-10-18T19:49:04,438,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,742,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,208,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,544,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,88,tfidf,15,Wrong Citation,0.933,False,Wrong Citation,True
+2026-10-18T19:49:04,982,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,601,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,267,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,980,tfidf,15,No Failure,0.333,True,Partial Answer,False
+2026-10-18T19:49:04,711,tfidf,15,Contradiction,0.933,False,Contradiction,True
+2026-10-18T19:49:04,247,tfidf,15,No Failure,0.8,False,No Failure,True
+2026-10-18T19:49:04,663,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,730,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,1189,tfidf,15,No Failure,0.8,False,No Failure,True
+2026-10-18T19:49:04,297,tfidf,15,No Failure,0.667,False,No Failure,True
+2026-10-18T19:49:04,296,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,719,tfidf,15,Partial Answer,0.467,True,Partial Answer,True
+2026-10-18T19:49:04,71,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,17,tfidf,15,No Failure,0.533,True,No Failure,True
+2026-10-18T19:49:04,251,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,782,tfidf,15,Partial Answer,0.333,True,Partial Answer,True
+2026-10-18T19:49:04,1067,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,125,tfidf,15,No Failure,0.4,True,No Failure,True
+2026-10-18T19:49:04,514,tfidf,15,Wrong Citation,0.733,False,Wrong Citation,True
+2026-10-18T19:49:04,1129,tfidf,15,Contradiction,0.867,False,Contradiction,True
+2026-10-18T19:49:04,203,tfidf,15,Hallucination,0.933,False,Hallucination,True
+2026-10-18T19:49:04,453,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,1072,tfidf,15,No Failure,0.6,False,No Failure,True
+2026-10-18T19:49:04,832,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,1020,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,516,tfidf,15,Wrong Citation,0.733,False,Wrong Citation,True
+2026-10-18T19:49:04,1200,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,870,tfidf,15,Hallucination,0.333,True,Partial Answer,False
+2026-10-18T19:49:04,461,tfidf,15,Partial Answer,0.267,True,Partial Answer,True
+2026-10-18T19:49:04,968,tfidf,15,No Failure,0.733,False,No Failure,True
+2026-10-18T19:49:04,1069,tfidf,15,Wrong Citation,0.8,False,Wrong Citation,True
+2026-10-18T19:49:04,793,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,582,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,737,tfidf,15,No Failure,1.0,False,No Failure,True
+2026-10-18T19:49:04,541,tfidf,15,Contradiction,0.2,True,Partial Answer,False
+2026-10-18T19:49:04,241,tfidf,15,No Failure,0.667,False,No Failure,True
+2026-10-18T19:49:04,951,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,774,tfidf,15,No Failure,0.8,False,No Failure,True
+2026-10-18T19:49:04,676,tfidf,15,No Failure,0.867,False,No Failure,True
+2026-10-18T19:49:04,915,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,319,tfidf,15,Wrong Citation,0.867,False,Wrong Citation,True
+2026-10-18T19:49:04,1033,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,494,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,1103,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,1015,tfidf,15,Contradiction,0.933,False,Contradiction,True
+2026-10-18T19:49:04,1012,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,415,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,724,tfidf,15,No Failure,0.933,False,No Failure,True
+2026-10-18T19:49:04,436,tfidf,15,Hallucination,0.267,True,Partial Answer,False
+2026-10-18T19:49:04,1180,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,1161,tfidf,15,Wrong Citation,0.8,False,Wrong Citation,True
+2026-10-18T19:49:04,949,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,717,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,914,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,827,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,712,tfidf,15,No Failure,0.867,False,No Failure,True
+2026-10-18T19:49:04,641,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,290,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,765,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,548,tfidf,15,Wrong Citation,0.933,False,Wrong Citation,True
+2026-10-18T19:49:04,1138,tfidf,15,No Failure,0.267,True,Partial Answer,False
+2026-10-18T19:49:04,620,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,822,tfidf,15,Partial Answer,0.333,True,Partial Answer,True
+2026-10-18T19:49:04,351,tfidf,15,No Failure,0.8,False,No Failure,True
+2026-10-18T19:49:04,810,tfidf,15,Contradiction,0.867,False,Contradiction,True
+2026-10-18T19:49:04,420,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,174,tfidf,15,No Failure,0.667,False,No Failure,True
+2026-10-18T19:49:04,41,tfidf,15,Wrong Citation,0.867,False,Wrong Citation,True
+2026-10-18T19:49:04,1002,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,1092,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,346,tfidf,15,Contradiction,0.333,True,Partial Answer,False
+2026-10-18T19:49:04,1119,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,1056,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,444,tfidf,15,Contradiction,0.4,True,Contradiction,True
+2026-10-18T19:49:04,245,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,1183,tfidf,15,Reasoning Error,0.933,False,Reasoning Error,True
+2026-10-18T19:49:04,223,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,612,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,552,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,969,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,856,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,381,tfidf,15,Contradiction,0.867,False,Contradiction,True
+2026-10-18T19:49:04,727,tfidf,15,Wrong Citation,0.267,True,Partial Answer,False
+2026-10-18T19:49:04,610,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,48,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,263,tfidf,15,Contradiction,0.667,False,Contradiction,True
+2026-10-18T19:49:04,804,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,1164,tfidf,15,Wrong Citation,0.933,False,Wrong Citation,True
+2026-10-18T19:49:04,684,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,1090,tfidf,15,Partial Answer,0.267,True,Partial Answer,True
+2026-10-18T19:49:04,1086,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,18,tfidf,15,Partial Answer,0.4,True,Partial Answer,True
+2026-10-18T19:49:04,623,tfidf,15,No Failure,0.6,False,No Failure,True
+2026-10-18T19:49:04,299,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,789,tfidf,15,No Failure,1.0,False,No Failure,True
+2026-10-18T19:49:04,12,tfidf,15,Hallucination,0.933,False,Hallucination,True
+2026-10-18T19:49:04,471,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,11,tfidf,15,No Failure,0.733,False,No Failure,True
+2026-10-18T19:49:04,137,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,23,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,291,tfidf,15,Hallucination,0.8,False,Hallucination,True
+2026-10-18T19:49:04,1185,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,344,tfidf,15,Wrong Citation,0.933,False,Wrong Citation,True
+2026-10-18T19:49:04,1118,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,995,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,562,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,753,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,1105,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,615,tfidf,15,Wrong Citation,0.933,False,Wrong Citation,True
+2026-10-18T19:49:04,902,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,1044,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,331,tfidf,15,Contradiction,0.667,False,Contradiction,True
+2026-10-18T19:49:04,1078,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,888,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,322,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,369,tfidf,15,Partial Answer,0.333,True,Partial Answer,True
+2026-10-18T19:49:04,1158,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,710,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,644,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,218,tfidf,15,Partial Answer,0.267,True,Partial Answer,True
+2026-10-18T19:49:04,216,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,109,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,129,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,1157,tfidf,15,Partial Answer,0.4,True,Partial Answer,True
+2026-10-18T19:49:04,844,tfidf,15,Wrong Citation,1.0,False,Wrong Citation,True
+2026-10-18T19:49:04,625,tfidf,15,Reasoning Error,0.933,False,Reasoning Error,True
+2026-10-18T19:49:04,162,tfidf,15,No Failure,0.8,False,No Failure,True
+2026-10-18T19:49:04,487,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,455,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,217,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,1080,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,777,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,397,tfidf,15,Partial Answer,0.4,True,Partial Answer,True
+2026-10-18T19:49:04,1021,tfidf,15,Partial Answer,0.333,True,Partial Answer,True
+2026-10-18T19:49:04,1142,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,886,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,1115,tfidf,15,Hallucination,0.933,False,Hallucination,True
+2026-10-18T19:49:04,27,tfidf,15,No Failure,0.867,False,No Failure,True
+2026-10-18T19:49:04,790,tfidf,15,Contradiction,0.667,False,Contradiction,True
+2026-10-18T19:49:04,181,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,1029,tfidf,15,Hallucination,0.667,False,Hallucination,True
+2026-10-18T19:49:04,905,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,1107,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,699,tfidf,15,No Failure,0.533,True,No Failure,True
+2026-10-18T19:49:04,1076,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,1122,tfidf,15,Hallucination,0.867,False,Hallucination,True
+2026-10-18T19:49:04,450,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,1008,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,1184,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,654,tfidf,15,Reasoning Error,0.933,False,Reasoning Error,True
+2026-10-18T19:49:04,367,tfidf,15,Partial Answer,0.4,True,Partial Answer,True
+2026-10-18T19:49:04,387,tfidf,15,Partial Answer,0.267,True,Partial Answer,True
+2026-10-18T19:49:04,1064,tfidf,15,Partial Answer,0.533,True,Partial Answer,True
+2026-10-18T19:49:04,441,tfidf,15,Contradiction,0.867,False,Contradiction,True
+2026-10-18T19:49:04,9,tfidf,15,Contradiction,0.733,False,Contradiction,True
+2026-10-18T19:49:04,167,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,599,tfidf,15,Contradiction,0.933,False,Contradiction,True
+2026-10-18T19:49:04,973,tfidf,15,Contradiction,0.267,True,Partial Answer,False
+2026-10-18T19:49:04,993,tfidf,15,Wrong Citation,0.8,False,Wrong Citation,True
+2026-10-18T19:49:04,233,tfidf,15,Wrong Citation,0.933,False,Wrong Citation,True
+2026-10-18T19:49:04,708,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,1191,tfidf,15,Wrong Citation,0.867,False,Wrong Citation,True
+2026-10-18T19:49:04,694,tfidf,15,Contradiction,0.267,True,Partial Answer,False
+2026-10-18T19:49:04,681,tfidf,15,No Failure,0.667,False,No Failure,True
+2026-10-18T19:49:04,721,tfidf,15,Partial Answer,0.333,True,Partial Answer,True
+2026-10-18T19:49:04,54,tfidf,15,No Failure,0.2,True,Partial Answer,False
+2026-10-18T19:49:04,845,tfidf,15,Hallucination,1.0,False,Hallucination,True
+2026-10-18T19:49:04,1181,tfidf,15,No Failure,0.733,False,No Failure,True
+2026-10-18T19:49:04,469,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,1169,tfidf,15,No Failure,0.933,False,No Failure,True
+2026-10-18T19:49:04,948,tfidf,15,Reasoning Error,1.0,False,Reasoning Error,True
+2026-10-18T19:49:04,840,tfidf,15,Partial Answer,0.533,True,Partial Answer,True
+2026-10-18T19:49:04,206,tfidf,15,Hallucination,0.867,False,Hallucination,True
+2026-10-18T19:49:04,860,tfidf,15,Contradiction,1.0,False,Contradiction,True
+2026-10-18T19:49:04,207,tfidf,15,No Failure,0.933,False,No Failure,True
+2026-10-18T19:49:04,794,tfidf,15,Retrieval Failure,1.0,False,Retrieval Failure,True
+2026-10-18T19:49:04,1091,tfidf,15,Missing Context,1.0,False,Missing Context,True
+2026-10-18T19:49:04,1005,tfidf,15,Hallucination,1.0,False,Hallucination,True
