@@ -46,5 +46,5 @@ To add a module: add an entry to `registry.py` and a page in `views/` named afte
 - **Article Q&A:** reads `GEMINI_API_KEY` from `AIProjects/.env`. You can also paste the key
   into the page's settings.
 - **Games:** need Python with Tk (python.org Python has it; with Homebrew run `brew install python-tk`).
-- Embedded apps read their data exactly as they do when run on their own (for example, the
-  kNN regressor still reads the transcoding TSV from `~/Downloads/`).
+- Embedded apps read their data exactly as they do when run on their own. The kNN regressor
+  uses the transcoding TSV in `KnnMLR/data/`, and falls back to `~/Downloads/`.

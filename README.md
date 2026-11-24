@@ -69,13 +69,12 @@ opens at **http://localhost:8600**. Pick a module from the sidebar. Embedded app
 the first time you open their page, on ports 8601-8604. To stop the hub, press `Ctrl+C`
 in the terminal.
 
-### Data you have to supply
+### Data
 
 - **RAG Failure Diagnosis Agent:** the dataset `rag_failure_cases.csv` is not in the repo.
   Put it in `LearningAgent/` or `~/Downloads/`, or upload it on the module's page.
-- **Transcode Time Predictor:** `kNNRegressorAgent/agent.py` reads the transcoding TSV from
-  a hard-coded Downloads path. Point `DATA_PATH` at the copy in the repo,
-  `KnnMLR/data/transcoding_mesurment.tsv`, before you open that page.
+- **Transcode Time Predictor and MLR:** nothing to do. Both use the transcoding dataset in
+  the repo, `KnnMLR/data/transcoding_mesurment.tsv`.
 - **Corpus NLP Monitor:** uses the cached data in `CorpusNLP/data/` and works offline.
   The "Refresh data from the web" button downloads new data, which is slow.
 

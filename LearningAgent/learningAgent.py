@@ -19,7 +19,13 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
 # Settings
-DATA_PATH = "/Users/je03va/Downloads/rag_failure_cases.csv"
+DATA_FILE = "rag_failure_cases.csv"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+# First match wins: next to this file, its data/ folder, then ~/Downloads
+DATA_CANDIDATES = [os.path.join(_HERE, DATA_FILE),
+                   os.path.join(_HERE, "data", DATA_FILE),
+                   os.path.join(os.path.expanduser("~"), "Downloads", DATA_FILE)]
+DATA_PATH = next((p for p in DATA_CANDIDATES if os.path.exists(p)), DATA_CANDIDATES[0])
 OUT_DIR = "agent_output"           # graphs and the prediction log are saved here
 RANDOM_STATE = 42
 TEST_SIZE = 0.20
@@ -44,7 +50,7 @@ def save_and_show(fig, name):
 # determined by the label, so the agent would not know them at prediction time.
 def load_data(path):
     if not os.path.exists(path):
-        sys.exit(f"Could not find {path}. Update DATA_PATH at the top of this file.")
+        sys.exit(f"Could not find {path}. Put it next to this file, in data/, or in ~/Downloads.")
     df = pd.read_csv(path)
     print(f"Loaded {len(df)} rows, {df.shape[1]} columns. Missing values: {int(df.isna().sum().sum())}")
     print("\nClass balance:\n" + df["failure_type"].value_counts().to_string())

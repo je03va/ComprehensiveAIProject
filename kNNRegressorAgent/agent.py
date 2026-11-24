@@ -17,8 +17,16 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
-DATA_PATH = '/Users/je03va/Downloads/online+video+characteristics+and+transcoding+time+dataset/transcoding_mesurment.tsv'
 BASE_DIR = Path(__file__).parent
+DATA_FILE = "transcoding_mesurment.tsv"
+# First match wins: this module's data/, the copy shipped with KnnMLR, then ~/Downloads
+DATA_CANDIDATES = [
+    BASE_DIR / "data" / DATA_FILE,
+    BASE_DIR.parent / "KnnMLR" / "data" / DATA_FILE,
+    Path.home() / "Downloads" / "online+video+characteristics+and+transcoding+time+dataset" / DATA_FILE,
+    Path.home() / "Downloads" / DATA_FILE,
+]
+DATA_PATH = next((p for p in DATA_CANDIDATES if p.exists()), DATA_CANDIDATES[0])
 MODEL_PATH = BASE_DIR / "models" / "agent.joblib"
 LOG_DIR = BASE_DIR / "logs"
 PLOT_DIR = BASE_DIR / "plots"
