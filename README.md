@@ -17,26 +17,78 @@ Streamlit **hub** (`hub/`) that opens all 11 of them from one menu, grouped like
 | Games & Simulation | Data Structures Behind Your IT | Animated game-like agent | `GameProject/` |
 | Games & Simulation | Packet Race: BFS vs DFS vs A* | Search simulation | `GameProject/` |
 
-## Run the suite
+## Getting started
+
+### Requirements
+
+- **macOS or Linux** with `git` and **Python 3.12**. Python 3.13 works for the hub itself,
+  but the Sentiment module's PyTorch pin has no 3.13 build.
+- **Tk**, for the two desktop games. python.org installers include it. With Homebrew, run
+  `brew install python-tk@3.12`.
+- **A Gemini API key** for the Article Q&A chatbot. It's free from
+  [Google AI Studio](https://aistudio.google.com/apikey). The other modules work without it.
+
+### 1. Clone
 
 ```bash
-cp .env.example .env        # add GEMINI_API_KEY for the chatbot
-./hub/run_hub.sh            # opens http://localhost:8600
+git clone https://github.com/je03va/ComprehensiveAIProject.git
+cd ComprehensiveAIProject
 ```
 
-The first run creates `hub/.venv` from `hub/requirements.txt`. Four modules
-(kNN regressor, MLR, Corpus NLP, Sentiment) run as separate Streamlit apps embedded in
-the hub. Each one uses its own `.venv` because they need different NumPy versions.
-Create those once:
+### 2. Add your API key
+
+```bash
+cp .env.example .env
+# open .env and set GEMINI_API_KEY=...
+```
+
+### 3. Set up the embedded modules (one time)
+
+Four modules (kNN regressor, MLR, Corpus NLP, Sentiment) run as separate Streamlit apps
+that the hub embeds. Each needs its own virtual environment because they require different
+NumPy versions:
 
 ```bash
 for d in kNNRegressorAgent KnnMLR CorpusNLP NLPSentiment; do
-  python3 -m venv $d/.venv && $d/.venv/bin/pip install -r $d/requirements.txt
+  python3.12 -m venv $d/.venv
+  $d/.venv/bin/pip install -r $d/requirements.txt
 done
 ```
 
-If a module has no `.venv`, the hub falls back to its own Python. See
-[hub/README.md](hub/README.md) for how the modules are integrated, plus data notes.
+This takes several minutes, mostly for PyTorch and transformers in `NLPSentiment`. If you
+skip it, those four pages try to start with the hub's Python and may fail to import.
+
+### 4. Run the hub
+
+```bash
+./hub/run_hub.sh
+```
+
+The first run creates `hub/.venv` and installs `hub/requirements.txt`. The suite then
+opens at **http://localhost:8600**. Pick a module from the sidebar. Embedded apps start
+the first time you open their page, on ports 8601-8604. To stop the hub, press `Ctrl+C`
+in the terminal.
+
+### Data you have to supply
+
+- **RAG Failure Diagnosis Agent:** the dataset `rag_failure_cases.csv` is not in the repo.
+  Put it in `LearningAgent/` or `~/Downloads/`, or upload it on the module's page.
+- **Transcode Time Predictor:** `kNNRegressorAgent/agent.py` reads the transcoding TSV from
+  a hard-coded Downloads path. Point `DATA_PATH` at the copy in the repo,
+  `KnnMLR/data/transcoding_mesurment.tsv`, before you open that page.
+- **Corpus NLP Monitor:** uses the cached data in `CorpusNLP/data/` and works offline.
+  The "Refresh data from the web" button downloads new data, which is slow.
+
+### Troubleshooting
+
+- **"The module did not start":** the page shows the last lines of the module's log. The
+  full log is in `hub/logs/<module>.log`. Usually the module's `.venv` is missing (step 3).
+- **Port already in use:** stop the other process, or run
+  `./hub/run_hub.sh --server.port 8700`. Extra arguments are passed to Streamlit, and the
+  embedded apps keep ports 8601-8604.
+- **`No module named _tkinter`:** install Tk (see Requirements).
+
+See [hub/README.md](hub/README.md) for how the modules are integrated.
 
 Not in the repo: demo recordings (`*.mov`), project reports, generated outputs and logs the hub does not read, chatbot tests, virtual environments, and `.env`.
 
